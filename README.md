@@ -38,6 +38,14 @@ To read the input from the filesystem instead of a url.
 
 > ./highspot -p mixtape.json
 
+### Running the Program
+
+The executable 'highspot' in the root directory is for macOS.
+
+1. Download and unzip
+2. chmod 777 highspot
+3. Allow highspot in System Preferences/Security&Privacy/General
+
 ## Changes File
 
 The changes file format is based on JSON patch RFC 6902.
