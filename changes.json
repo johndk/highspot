@@ -1,0 +1,22 @@
+[
+    {
+        "op": "add",
+        "path": "/playlists/-",
+        "value": {
+            "user_id" : "7",
+            "song_ids" : [
+                "32",
+                "40"
+            ]
+        }
+    },
+    {
+        "op": "remove",
+        "path": "/playlists/1"
+    },
+    {
+        "op": "add",
+        "path": "/playlists/3/song_ids/-",
+        "value":"8"
+    }
+]
