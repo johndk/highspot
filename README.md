@@ -26,7 +26,7 @@ The -o argument specifies a filesystem path for the output file, the default is 
 
 ### Examples
 
-To run with the default argument.
+To run with the default arguments.
 
 > ./highspot
 
@@ -71,12 +71,14 @@ The changes file format is based on JSON patch RFC 6902.
 The changes file implements the operations specifed in the exercise:
 
 1. The add /playlists/- operation "adds a new playlist" to the end of the playlists collection.
-2. The remove /playlists/{id} operation "remove a playlist" with the specifed id from the playlists collection. In the example playlist with id 1 is removed.
-3. The add /playlists/{id}/song_ids/- operation "adds an existing song to an existing playlist". In the example song id 8 is added to playlist 3.
+2. The remove /playlists/{id} operation "removes a playlist" with the specifed id from the playlists collection. In the example, the playlist with id 1 is removed.
+3. The add /playlists/{id}/song_ids/- operation "adds an existing song to an existing playlist". In the example song id 8 is added to the playlist with id 3.
 
 ## Implementation Nodes
 
-The implementation is written in Go. Start with the main function in
+The implementation is written in Go. 
+
+Start with the main function in
 > cmd/main.go
 
 and the Execute function in
@@ -122,4 +124,4 @@ The entity data includes a stream id (and action) that is a monotonically increa
 
 The stream metadata could include an action to indicate new, updated, patched, and deleted entities in the stream. 
 
-Clients could pull data from the feed, from an appropriate starting cursor possibly zero, until the cursor reaches the end of the data source, and then periodically check for new data as appropriate.
+Clients could pull data from the feed, from an appropriate starting cursor (0 for example), until the cursor reaches the end of the data source, and then periodically check for new data as appropriate.
