@@ -102,7 +102,7 @@ Ingester Execute implements the three functions specified in the execise:
 
 ## Scaling Discussion
 
-To handle arbitrarily large data sets of users, songs, and playlists. Imagine a web service that allows these entities to be downloaded in batches of variable size. Consider a different endpoint for each entity. For example the fetch users endpoint:
+To handle arbitrarily large data sets of users, songs, and playlists. Imagine a web service that allows these entities to be downloaded in batches of a specified size. Consider a different endpoint for each entity. For example the fetch users endpoint:
 
 > http://api.highspot.com/users?streamId=2345321&limit=100&apikey=123abc
 
