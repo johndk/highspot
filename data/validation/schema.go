@@ -30,6 +30,11 @@ var PatchSchema = `{
 var PatchPlaylistSchema = `{
     "type": "object",
     "properties": {
+        "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 10
+        },
         "user_id": {
             "type": "string",
             "minLength": 1,
@@ -50,6 +55,7 @@ var PatchPlaylistSchema = `{
     },
     "additionalProperties": false,
     "required": [
+        "id",
         "user_id",
         "song_ids"
     ]

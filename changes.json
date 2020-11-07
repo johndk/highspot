@@ -3,6 +3,7 @@
         "op": "add",
         "path": "/playlists/-",
         "value": {
+            "id": "4",
             "user_id" : "7",
             "song_ids" : [
                 "32",

@@ -56,6 +56,7 @@ The changes file format is based on JSON patch RFC 6902.
         "op": "add",
         "path": "/playlists/-",
         "value": {
+            "id": "4",
             "user_id" : "7",
             "song_ids" : [
                 "32",

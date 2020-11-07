@@ -1,6 +1,7 @@
 package data
 
 import (
+	"bytes"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -139,7 +140,13 @@ func (i *Ingester) produceOutput(mixtape *resources.MixTape, changes []resources
 		return errors.New(fmt.Sprintf("Cannot write output file. %v", err))
 	}
 
-	err = i.writeOutput(data)
+	var prettyJSON bytes.Buffer
+	err = json.Indent(&prettyJSON, data, "", "  ")
+	if err != nil {
+		return errors.New(fmt.Sprintf("Cannot write output file. %v", err))
+	}
+
+	err = i.writeOutput(prettyJSON.Bytes())
 	if err != nil {
 		return errors.New(fmt.Sprintf("Cannot write output file. %v", err))
 	}
