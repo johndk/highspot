@@ -79,9 +79,9 @@ The changes file format is based on JSON patch RFC 6902.
 
 The changes file implements the operations specifed in the exercise:
 
-1. The add /playlists/- operation "adds a new playlist" to the end of the playlists collection.
+1. The add /playlists/- operation "adds a new playlist" to the end of the playlists collection. In the example, a playlist with id 4 is added.
 2. The remove /playlists/{id} operation "removes a playlist" with the specifed id from the playlists collection. In the example, the playlist with id 1 is removed.
-3. The add /playlists/{id}/song_ids/- operation "adds an existing song to an existing playlist". In the example song id 8 is added to the playlist with id 3.
+3. The add /playlists/{id}/song_ids/- operation "adds an existing song to an existing playlist". In the example, song id 8 is added to the playlist with id 3.
 
 ## Implementation Nodes
 
